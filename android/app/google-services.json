@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "586124243026",
+    "project_id": "fir-auth-67ac3",
+    "storage_bucket": "fir-auth-67ac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586124243026:android:ddb4e0cd391a9eb5c3ef8b",
+        "android_client_info": {
+          "package_name": "com.ReactNativeTask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586124243026-d0jf8m3ef44j55b4cgkc4p2341u00p4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwaT9VM2Y0Vha7R2v_wN-dnoHwqvKwW1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586124243026-d0jf8m3ef44j55b4cgkc4p2341u00p4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

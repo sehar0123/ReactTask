@@ -19,22 +19,13 @@ import Header from '../../components/Header';
 import {connect, useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 import {useEffect} from 'react';
-import {logout} from 'src/redux/reducers/Auth/authActions';
-import {getUserDetails} from 'src/redux/reducers/Auth/authActions';
+
+
 import auth, { firebase } from '@react-native-firebase/auth';
 const Profile = props => {
   const navigation = useNavigation();
   const state = useSelector(state => state);
-  useEffect(() => {
-    console.log('PROFILE', JSON.stringify(props?.auth?.profile, null, 2));
-    // props.getUserDetails();
-    props.getUserDetails(undefined, ({success}) => {
-      if (success) {
-        // setLoader(false);
-        console.log('HDHDH', state?.auth?.userDetaills);
-      }
-    });
-  }, []);
+ 
   signOutUser = async () => {
     try {
         await firebase.auth().signOut();
@@ -46,7 +37,7 @@ const Profile = props => {
   const states = useSelector(state => state);
   return (
     <SafeAreaView style={{...styles.container,backgroundColor:props.theme.theme=="dark"?"black":theme.secondary}}>
-      <Header title="Profile" onPressLeft={() => navigation.goBack()} />
+      <Header title="Profile"  />
 
       {/* <Text style={styles.profile}> Your Profile</Text> */}
 
@@ -140,6 +131,6 @@ const Profile = props => {
 };
 
 const mapStateToProps = state => state;
-const mapDispatchToProps = {logout, getUserDetails};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile);

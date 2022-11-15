@@ -16,13 +16,13 @@ import styles from './styles';
 import {EnableSnackBar} from 'src/config/function';
 import {getHeight} from '../../../Constant/functions';
 import Header from 'src/components/Header';
-import {useSelector} from 'react-redux';
+import {connect, useSelector} from 'react-redux';
 import Button from 'src/components/Button';
 import {getWidth} from 'src/config/functions';
 import {phoneCodes} from 'src/config/dummyData';
 import {FlatList} from 'react-native';
-import {register} from 'src/redux/reducers/Auth/authActions';
-import {connect} from 'react-redux';
+
+
 import {useNavigation} from '@react-navigation/native';
 import {ScrollView} from 'react-native';
 import auth from '@react-native-firebase/auth';
@@ -214,6 +214,6 @@ const navigation=useNavigation()
   );
 };
 const mapStateToProps = state => state;
-const mapDispatchToProps = {register};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

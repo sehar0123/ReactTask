@@ -12,7 +12,6 @@ import {useSelector} from 'react-redux';
 import {KeyboardAvoidingView} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {connect} from 'react-redux';
-import {login} from 'src/redux/reducers/Auth/authActions';
 import {EnableSnackBar} from 'src/config/function';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
@@ -238,6 +237,6 @@ const Sigin = props => {
 };
 
 const mapStateToProps = state => state;
-const mapDispatchToProps = {login};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sigin);
